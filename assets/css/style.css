@@ -1,0 +1,399 @@
+html, * {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bg-black-dark {
+  background: #18191b;
+}
+
+.bg-black-light {
+  background: #212225;
+}
+
+.color-orange {
+  color: #FAB702;
+}
+
+.btn:hover i {
+  padding-left: 0.5rem;
+}
+
+.text-white {
+  color: #ddd !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.btn {
+  width: 250px;
+}
+
+.btn:hover i {
+  padding-left: 0.3rem;
+}
+
+/************** Navbar CSS Starts **************/
+.navbar .nav-item .nav-link {
+  font-family: "Dosis";
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: #FAB702 !important;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar.show_nav {
+  display: block !important;
+}
+
+.navbar .navbar-toggler {
+  border: 1px solid #FAB702;
+}
+
+/************** Navbar CSS Ends **************/
+/************** Header CSS Starts **************/
+header {
+  background: url("../images/background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed !important;
+  height: auto;
+  overflow: hidden;
+}
+
+header .header-head {
+  font-family: "Allura";
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: "capitalize";
+}
+
+header hr {
+  height: 1px;
+  width: 140px;
+  background-color: #FAB702;
+  opacity: 1;
+}
+
+header h3 {
+  font-family: "Allura";
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: "capitalize";
+}
+
+header .btn {
+  background-color: transparent;
+  border: "solid 2px";
+  border-color: #fff;
+  border-radius: 0;
+  font-family: "Dosis";
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .btn:hover {
+  background-color: #FAB702;
+  color: #111;
+  border-color: #FAB702;
+}
+
+header .btn:hover i {
+  color: #111;
+}
+
+/************** Header CSS Ends **************/
+/************** Offer CSS Starts **************/
+section .bg-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+section .bg-overlay h5 {
+  font-family: "Dosis";
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section .bg-overlay p {
+  font-family: "Dosis";
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: initial;
+}
+
+section .bg-overlay .btn {
+  background-color: transparent;
+  border: "solid 1px";
+  border-color: #fff;
+  border-radius: 0;
+  font-family: "Dosis";
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+section .bg-overlay .btn:hover {
+  background-color: #FAB702;
+  color: #111;
+  border-color: #FAB702;
+}
+
+section .bg-overlay .btn i {
+  color: #FAB702;
+}
+
+section .bg-overlay .btn:hover i {
+  color: #111;
+}
+
+/************** Offer CSS Ends **************/
+/************** Quatation CSS Starts **************/
+section#qoutation-1 {
+  background-color: #FAB702;
+}
+
+section#qoutation-1 h4 {
+  font-family: "Bona Nova";
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: "initial";
+}
+
+section#qoutation-1 .btn {
+  background-color: transparent;
+  border: "solid 2px";
+  border-color: #111;
+  border-radius: 0;
+  font-family: "Dosis";
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+section#qoutation-1 .btn:hover {
+  background-color: #111;
+  color: #ffffff;
+  border-color: #111;
+}
+
+/************** Quatation CSS Ends **************/
+/************** Services CSS Starts **************/
+section#services h5 {
+  font-family: "Dosis";
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FAB702;
+  letter-spacing: 1px;
+}
+
+section#services p {
+  font-family: "Bona Nova";
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: initial;
+  text-align: justify;
+}
+
+section#services .btn {
+  background-color: transparent;
+  border: "solid 1px";
+  border-color: #fff;
+  border-radius: 0;
+  font-family: "Dosis";
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+section#services .btn:hover {
+  background-color: #FAB702;
+  color: #111;
+  border-color: #FAB702;
+}
+
+section#services .btn i {
+  color: #FAB702;
+  vertical-align: bottom;
+}
+
+section#services .btn:hover i {
+  color: #111;
+}
+
+/************** Services CSS Ends **************/
+/************** Features CSS Starts **************/
+section#features {
+  background-image: url("../images/bg-features.jpg");
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+section#features h5 {
+  font-family: "Dosis";
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FAB702;
+  letter-spacing: 1px;
+}
+
+section#features p {
+  font-family: "Bona Nova";
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: initial;
+  text-align: justify;
+}
+
+section#features .card {
+  background: transparent;
+  border: none;
+}
+
+section#features .card i {
+  color: #FAB702;
+  font-size: 3.5rem;
+}
+
+/************** Features CSS Ends **************/
+/************** Filter CSS Starts **************/
+section#filter .btn {
+  width: 160px;
+  background-color: transparent;
+  border: "solid 1px";
+  border-color: transparent;
+  border-radius: 0;
+  font-family: "Dosis";
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #ddd;
+  text-transform: uppercase;
+}
+
+section#filter .btn:hover {
+  background-color: #111;
+}
+
+section#filter .btn:active .filter-button:active {
+  background-color: #FAB702;
+  color: #111;
+}
+
+/************** Filter CSS Ends **************/
+/************** Count CSS Starts **************/
+section#count-down h3 {
+  font-family: "Dosis";
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FAB702;
+  letter-spacing: 1px;
+}
+
+section#count-down p {
+  font-family: "Bona Nova";
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/************** Count CSS Ends **************/
+/************** Quatation 2 CSS Starts **************/
+section#qoutation-2 {
+  background-image: url("../images/bg-22.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 112px;
+  overflow: hidden;
+}
+
+section#qoutation-2 .btn {
+  background-color: transparent;
+  border: "solid 2px";
+  border-color: #ffffff;
+  border-radius: 5px;
+  font-family: "Dosis";
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+section#qoutation-2 .btn:hover {
+  background-color: #ffffff;
+  color: #111111;
+  border-color: #ffffff;
+}
+
+section#qoutation-2 .btn:hover i {
+  color: #FAB702;
+}
+
+/************** Quatation 2 CSS Ends **************/
+/************** Footer CSS Starts **************/
+Footer .footer-menu h5 {
+  font-family: "Dosis";
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+Footer .footer-menu li {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #222;
+  font-size: 0.87rem;
+}
+
+Footer .footer-menu li:hover a {
+  color: #FAB702;
+}
+
+Footer .list-inline-item:hover {
+  background-color: #FAB702;
+  color: #111;
+  border-radius: 10px;
+}
+
+Footer .list-inline-item:hover a {
+  color: #111;
+}
+
+/************** Footer CSS Ends **************/
+/*# sourceMappingURL=style.css.map */

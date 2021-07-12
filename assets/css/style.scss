@@ -1,0 +1,375 @@
+html, *{
+    padding: 0;
+    margin:0; 
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    // &:hover {
+    //     color: inherit; 
+    // }
+}
+@mixin common-code($par1, $par2, $par3, $par4){
+    font-family: $par1;
+    font-size: $par2; 
+    font-weight: $par3;
+    text-transform: $par4;
+}
+@mixin button-code($par1, $par2, $par3, $par4, $par5, $par6, $par7, $par8, $par9, $par10){
+    background-color: $par1;
+    border: $par2;
+    border-color: $par3;
+    border-radius: $par4;
+    font-family: $par5;
+    font-size: $par6;
+    font-weight: $par7;
+    letter-spacing: $par8;
+    color: $par9;
+    text-transform: $par10;
+}
+$bg-color: #FAB702; 
+$bg-overlay-color: rgba(0,0,0,0.7); 
+$bg-dark: #18191b; 
+$bg-light-dark: #212225; 
+$light-dark: #ddd; 
+
+.bg-black-dark{
+    background: $bg-dark;
+}
+.bg-black-light{
+    background: $bg-light-dark;
+}
+.color-orange{
+    color: $bg-color; 
+}
+.btn:hover i{
+    padding-left: 0.5rem;
+}
+.text-white{
+    color: $light-dark !important;
+}
+.text-justify{
+    text-align: justify;
+}
+.btn{
+    width: 250px; 
+    &:hover i{
+        padding-left: 0.3rem; 
+    }
+}
+
+
+/************** Navbar CSS Starts **************/
+.navbar .nav-item .nav-link{
+    @include common-code('Dosis', 0.8rem, 500, uppercase);
+    letter-spacing: 2px; 
+    &:hover{
+        color: #FAB702 !important; 
+    }
+}
+.navbar{
+    display: none; 
+}
+.navbar.show_nav{
+    display: block !important; 
+}
+.navbar .navbar-toggler{
+    border: 1px solid #FAB702; 
+}
+
+/************** Navbar CSS Ends **************/
+
+/************** Header CSS Starts **************/
+header{
+    background: url('../images/background.jpg'); 
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed !important;
+    height: auto; 
+    overflow: hidden;
+
+    .header-head{
+        @include common-code('Allura', 5rem, 500, 'capitalize');
+    }
+    hr{
+        height: 1px;
+        width: 140px;
+        background-color: $bg-color;
+        opacity: 1;
+    }
+    h3{
+        @include common-code('Allura', 3rem, 500, 'capitalize');
+    }
+    .btn{
+        @include button-code(transparent, 'solid 2px', #fff, 0, 'Dosis', 1.25rem, 600, 1.5px, #fff, uppercase);
+        &:hover{
+            background-color: $bg-color; 
+            color: #111; 
+            border-color: $bg-color;
+        }
+        &:hover i{
+            color: #111; 
+        }
+    }
+}
+
+/************** Header CSS Ends **************/
+
+
+/************** Offer CSS Starts **************/
+section .bg-overlay{
+    background-color: $bg-overlay-color; 
+    h5{
+        @include common-code('Dosis', 1.35rem, 500, uppercase);
+        letter-spacing: 1px; 
+    }
+    p{
+        @include common-code('Dosis', 1rem, 500, initial);
+    }
+    .btn{
+        @include button-code(transparent, 'solid 1px', #fff, 0, 'Dosis', 1rem, 500, 1.5px, #fff, uppercase);
+        &:hover{
+            background-color: #FAB702; 
+            color: #111; 
+            border-color: #FAB702;
+        }
+        i{
+            color: $bg-color; 
+        }
+        &:hover i{
+            color: #111; 
+        }
+
+    }
+}
+/************** Offer CSS Ends **************/
+
+
+/************** Quatation CSS Starts **************/
+section#qoutation-1{
+    background-color: $bg-color;
+    h4{
+        @include common-code('Bona Nova', 2rem, 500, 'initial');
+    }
+    .btn{
+        @include button-code(transparent, 'solid 2px', #111, 0, 'Dosis', 1.25rem, 600, 1.5px, #111, uppercase);
+        &:hover{
+            background-color: #111; 
+            color: #ffffff; 
+            border-color: #111;
+        }
+    }
+}
+/************** Quatation CSS Ends **************/
+
+
+/************** Services CSS Starts **************/
+section#services{
+    h5{
+        @include common-code('Dosis', 1.35rem, 500, uppercase);
+        color: $bg-color; 
+        letter-spacing: 1px; 
+    }
+    p{
+        @include common-code('Bona Nova', 1rem, 500, initial);
+        text-align: justify; 
+    }
+    .btn{
+        @include button-code(transparent, 'solid 1px', #fff, 0, 'Dosis', 1rem, 500, 1.5px, #fff, uppercase);
+        &:hover{
+            background-color: #FAB702; 
+            color: #111; 
+            border-color: #FAB702;
+        }
+        i{
+            color: $bg-color; 
+            vertical-align: bottom;
+        }
+        &:hover i{
+            color: #111; 
+        }
+
+    }
+}
+/************** Services CSS Ends **************/
+
+
+/************** Features CSS Starts **************/
+section#features{
+    background-image: url('../images/bg-features.jpg'); 
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+
+    h5{
+        @include common-code('Dosis', 1.35rem, 500, uppercase);
+        color: $bg-color; 
+        letter-spacing: 1px; 
+    }
+    p{
+        @include common-code('Bona Nova', 1rem, 500, initial);
+        text-align: justify; 
+    }
+    .card{
+        background: transparent; 
+        border: none; 
+        i{
+            color: #FAB702; 
+            font-size: 3.5rem;
+        }
+
+    }
+}
+/************** Features CSS Ends **************/
+
+
+/************** Filter CSS Starts **************/
+section#filter{
+    .btn{
+        width: 160px; 
+        @include button-code(transparent, 'solid 1px', transparent, 0, 'Dosis', 0.8rem, 500, 1.5px, #ddd, uppercase);
+        &:hover{
+            background-color: #111; 
+        }
+    }
+    .btn:active .filter-button:active{
+        background-color: $bg-color; 
+        color: #111; 
+    }
+    // p{
+    //     @include common-code('Bona Nova', 1rem, 500, initial);
+    //     text-align: justify; 
+    // }
+    // .card{
+    //     background: transparent; 
+    //     border: none; 
+    //     i{
+    //         color: #FAB702; 
+    //         font-size: 3.5rem;
+    //     }
+
+    // }
+}
+/************** Filter CSS Ends **************/
+
+
+/************** Count CSS Starts **************/
+section#count-down{
+    h3{
+        @include common-code('Dosis', 3rem, 500, uppercase);
+        color: $bg-color; 
+        letter-spacing: 1px; 
+    }
+    p{
+        @include common-code('Bona Nova', 1rem, 500, uppercase);
+    }
+}
+/************** Count CSS Ends **************/
+
+
+/************** Quatation 2 CSS Starts **************/
+section#qoutation-2{
+    background-image: url('../images/bg-22.jpg');
+    // background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+    position: relative;
+    min-height: 112px;
+    overflow: hidden;
+    .btn{
+        @include button-code(transparent, 'solid 2px', #ffffff, 5px, 'Dosis', 1.25rem, 600, 1.5px, #ffffff, uppercase);
+        &:hover{
+            background-color: #ffffff; 
+            color: #111111; 
+            border-color: #ffffff;
+
+            i{
+                color: $bg-color;
+            }
+        }
+    }
+}
+/************** Quatation 2 CSS Ends **************/
+
+
+/************** Footer CSS Starts **************/
+Footer{
+    .footer-menu h5{
+        @include common-code('Dosis', 1.35rem, 500, uppercase);
+        letter-spacing: 1px; 
+    }
+    .footer-menu li{
+        padding-bottom: 1rem;
+        border-bottom: 1px solid#222; 
+        font-size: 0.87rem;
+    }
+    .footer-menu li:hover a{
+        color: #FAB702; 
+    }
+    .list-inline-item:hover{
+        background-color: #FAB702; 
+        color: #111; 
+        border-radius: 10px; 
+    }
+    .list-inline-item:hover a{
+        color: #111; 
+    }
+}
+/************** Footer CSS Ends **************/
+
+
+// #snowflakeContainer {
+//     position: absolute;
+//     left: 0px;
+//     top: 0px;
+//     // display: none;
+// }
+
+// .snowflake {
+//     position: fixed;
+//     background-color: #CCC;
+//     user-select: none;
+//     z-index: 1000;
+//     pointer-events: none;
+//     border-radius: 50%;
+//     width: 10px;
+//     height: 10px;
+// }
+// .snowflake {
+//     --size: 1vw;
+//     width: var(--size);
+//     height: var(--size);
+//     background: white;
+//     border-radius: 50%;
+//     position: absolute;
+//     top: -5vh;
+//   }
+  
+//   @keyframes snowfall {
+//     0% {
+//       transform: translate3d(var(--left-ini), 0, 0);
+//     }
+//     100% {
+//       transform: translate3d(var(--left-end), 110vh, 0);
+//     }
+//   }
+  
+//   @for $i from 1 through 50 {
+//     .snowflake:nth-child(#{$i}) {
+//       --size: #{random(5) * 0.2}vw;
+//       --left-ini: #{random(20) - 10}vw;
+//       --left-end: #{random(20) - 10}vw;
+//       left: #{random(100)}vw;
+//       animation: snowfall #{5 + random(10)}s linear infinite;
+//       animation-delay: -#{random(10)}s;
+//     }
+//   }
+
+//   .snowflake:nth-child(6n) {
+//     filter: blur(1px);
+//   }
