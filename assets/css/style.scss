@@ -72,6 +72,20 @@ $light-dark: #ddd;
         color: #FAB702 !important; 
     }
 }
+.navbar .nav-item::after{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FAB702;
+    position: absolute;
+    display: flex;
+    top: 47%;
+}
+.nav-item:first-child:after{
+    content: none; 
+}
+
 .navbar{
     display: none; 
 }
