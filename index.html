@@ -251,11 +251,11 @@
     <section id="filter" class="bg-black-dark">
         <div class="container py-5">
             <div class="filter-btn">
-                <button class="btn filter-button" data-filter="residential">residential</button>
-                <button class="btn filter-button" data-filter="hospitality">hospitality</button>
-                <button class="btn filter-button" data-filter="office">office</button>
-                <button class="btn filter-button" data-filter="commercial">commercial</button>
-                <button class="btn filter-button active" data-filter="all">all project</button>
+                <button class="btn filter-button my-2" data-filter="residential">residential</button>
+                <button class="btn filter-button my-2" data-filter="hospitality">hospitality</button>
+                <button class="btn filter-button my-2" data-filter="office">office</button>
+                <button class="btn filter-button my-2" data-filter="commercial">commercial</button>
+                <button class="btn filter-button my-2 active float-lg-end" data-filter="all">all project</button>
             </div>
             <div class="row mt-5 filter-products">
                 <div class="col-md-4 col-sm-12 filter center residential">
@@ -649,6 +649,12 @@
         </div>
     </footer>
 
+    <div class="fixed-bottom">
+        <button class="btn d-flex align-items-center justify-content-center p-0 my-2 ms-auto me-3" onclick="window.scrollTo(0, 0);">
+            <i class="bi bi-chevron-up p-0"></i>
+        </button>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -668,6 +674,10 @@
     <script>
         $(document).ready(function(){
             $(".filter-button").click(function(){
+                if( $(".filter-button").hasClass("active")) {
+                    $(".filter-button").removeClass("active"); 
+                }
+                $(this).addClass("active"); 
                 var value = $(this).attr('data-filter');
                 if(value == 'all'){
                     $('.filter').show('1000'); 
@@ -677,10 +687,10 @@
                     $('.filter').filter('.'+value).show('3000');
                 }
             });
-            if($(".filter-button").removeClass("active")){
-                $(this).removeClass("active"); 
-            }
-            $(this).addClass("active");
+            // if($(".filter-button").removeClass("active")){
+            //     $(this).removeClass("active"); 
+            // }
+            // $(this).addClass("active");
         });
     </script>
 
@@ -694,21 +704,31 @@
     </script>
 
     <script>
-          $(document).ready(function(){
+        $(document).ready(function(){
+            $('.fixed-bottom').hide();
             $(function () {
                 $(window).scroll(function () {
                     if ($(this).scrollTop() > 150) {
                         $('.navbar').addClass('show_nav');
-                        
-                        console.log("scroolling");
+                        $('.fixed-bottom').show();
                     } else {
                         $('.navbar').removeClass('show_nav');
-                        console.log("fade out");
+                        $('.fixed-bottom').hide();
                     }
                 });
             });
+            // $('.fixed-bottom .btn').click(function(){
+            //     $('html, body').animate({scrollTop:0}, 'slow');
+            //     return false;
+            // });
+        });
 
-            });
+        // $(document).ready(function() {
+        //     $('.fixed-bottom .btn').click(function(){
+        //         $('html, body').animate({scrollTop:0}, 'slow');
+        //         return false;
+        //     });
+        // });
     </script>
 
 </body>

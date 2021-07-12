@@ -41,6 +41,12 @@ a {
   padding-left: 0.3rem;
 }
 
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 /************** Navbar CSS Starts **************/
 .navbar .nav-item .nav-link {
   font-family: "Dosis";
@@ -304,12 +310,15 @@ section#filter .btn {
 }
 
 section#filter .btn:hover {
-  background-color: #111;
-}
-
-section#filter .btn:active .filter-button:active {
   background-color: #FAB702;
   color: #111;
+  font-weight: bold;
+}
+
+section#filter .filter-button.active {
+  background-color: #FAB702;
+  color: #111;
+  font-weight: bold;
 }
 
 /************** Filter CSS Ends **************/
@@ -396,4 +405,25 @@ Footer .list-inline-item:hover a {
 }
 
 /************** Footer CSS Ends **************/
+.fixed-bottom .btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: #fab702;
+  border: "none";
+  border-color: none;
+  border-radius: 0;
+  font-family: "Dosis";
+  font-size: initial;
+  font-weight: initial;
+  letter-spacing: initial;
+  color: #111;
+  text-transform: initial;
+}
+
+.fixed-bottom .btn:hover {
+  background-color: #111;
+  color: #ddd;
+  border-color: #111;
+}
 /*# sourceMappingURL=style.css.map */

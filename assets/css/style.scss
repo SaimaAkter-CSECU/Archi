@@ -58,6 +58,10 @@ $light-dark: #ddd;
         padding-left: 0.3rem; 
     }
 }
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
 
 
 /************** Navbar CSS Starts **************/
@@ -233,26 +237,16 @@ section#filter{
         width: 160px; 
         @include button-code(transparent, 'solid 1px', transparent, 0, 'Dosis', 0.8rem, 500, 1.5px, #ddd, uppercase);
         &:hover{
-            background-color: #111; 
+            background-color: $bg-color; 
+            color: #111; 
+            font-weight: bold; 
         }
     }
-    .btn:active .filter-button:active{
+    .filter-button.active{
         background-color: $bg-color; 
         color: #111; 
+        font-weight: bold; 
     }
-    // p{
-    //     @include common-code('Bona Nova', 1rem, 500, initial);
-    //     text-align: justify; 
-    // }
-    // .card{
-    //     background: transparent; 
-    //     border: none; 
-    //     i{
-    //         color: #FAB702; 
-    //         font-size: 3.5rem;
-    //     }
-
-    // }
 }
 /************** Filter CSS Ends **************/
 
@@ -322,54 +316,14 @@ Footer{
 }
 /************** Footer CSS Ends **************/
 
-
-// #snowflakeContainer {
-//     position: absolute;
-//     left: 0px;
-//     top: 0px;
-//     // display: none;
-// }
-
-// .snowflake {
-//     position: fixed;
-//     background-color: #CCC;
-//     user-select: none;
-//     z-index: 1000;
-//     pointer-events: none;
-//     border-radius: 50%;
-//     width: 10px;
-//     height: 10px;
-// }
-// .snowflake {
-//     --size: 1vw;
-//     width: var(--size);
-//     height: var(--size);
-//     background: white;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: -5vh;
-//   }
-  
-//   @keyframes snowfall {
-//     0% {
-//       transform: translate3d(var(--left-ini), 0, 0);
-//     }
-//     100% {
-//       transform: translate3d(var(--left-end), 110vh, 0);
-//     }
-//   }
-  
-//   @for $i from 1 through 50 {
-//     .snowflake:nth-child(#{$i}) {
-//       --size: #{random(5) * 0.2}vw;
-//       --left-ini: #{random(20) - 10}vw;
-//       --left-end: #{random(20) - 10}vw;
-//       left: #{random(100)}vw;
-//       animation: snowfall #{5 + random(10)}s linear infinite;
-//       animation-delay: -#{random(10)}s;
-//     }
-//   }
-
-//   .snowflake:nth-child(6n) {
-//     filter: blur(1px);
-//   }
+.fixed-bottom .btn{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    @include button-code(#fab702, 'none', none, 0, 'Dosis', initial, initial, initial, #111, initial);
+    &:hover{
+        background-color: #111; 
+        color: #ddd; 
+        border-color: #111;
+    }
+}
